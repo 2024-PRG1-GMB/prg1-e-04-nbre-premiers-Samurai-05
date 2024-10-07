@@ -12,27 +12,28 @@
 using namespace std;
 
 int main() {
-    constexpr int max_elements_in_line = 5;
-    constexpr int upper_limit = 1000;
-    constexpr int lower_limit = 2;
+    constexpr int max_elements_in_line  = 5;
+    constexpr int upper_limit           = 1000;
+    constexpr int lower_limit           = 2;
 
     cout << "Ce programme..." << endl << endl;
 
     char restart;
     do {
         // User entry
-        int limit;
+        int user_limit;
         do {
             cout << "Entrer une valeur [" << lower_limit << "-" << upper_limit << "] : ";
-            cin >> limit;
-        }while(limit < lower_limit || limit > upper_limit);
+            cin  >> user_limit;
+
+        } while(user_limit < lower_limit || user_limit > upper_limit);
 
 
         // Calculate prime numbers
         cout << endl << "Voici la liste des nombres premiers : " << endl;
 
         int elements_in_line = 0;
-        for(int i = lower_limit; i <= limit; ++i) {
+        for(int i = lower_limit; i <= user_limit; ++i) {
 
             int div_cpt = 2;    // Counts how many times the number is divided
             for (int j = 2; j < i; ++j) {
