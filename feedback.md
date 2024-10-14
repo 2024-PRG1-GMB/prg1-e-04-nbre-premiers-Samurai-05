@@ -1,0 +1,2 @@
+- Pas de constantes pour les entrées utilisateur ('O' et 'N')
+- Il manque un affichage avant que le programme se termine (selon la donnée)
